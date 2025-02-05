@@ -13,8 +13,44 @@
       rel="stylesheet"
     />
   </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
+  <body class="bg-midnight">
+    <header class="mt-8 mb-16 flex justify-center">
+      <img src="/assets/logo.svg" alt="" />
+    </header>
+    <main class="mx-auto grid max-w-[90%] gap-16">
+      <div
+        class="font-kumbh mode bg-midnightDarker mx-auto flex w-max gap-2 rounded-full p-2"
+      >
+        <button
+          data-selected
+          class="not-data-selected:text-gray rounded-full p-3 text-sm data-selected:bg-(--currentColor)"
+        >
+          pomodoro
+        </button>
+        <button
+          class="not-data-selected:text-gray/30 mx-auto rounded-full p-3 text-sm data-selected:bg-(--currentColor)"
+        >
+          short break
+        </button>
+        <button
+          class="not-data-selected:text-gray/30 rounded-full p-3 text-sm data-selected:bg-(--currentColor)"
+        >
+          long break
+        </button>
+      </div>
+      <div class="timer mx-auto rounded-[50%] bg-pink-400 p-4">
+        <div class="innerContainer relative rounded-[50%] bg-amber-400">
+          <div
+            class="progressBar absolute inset-0 m-2 rounded-[50%] bg-red-500"
+          ></div>
+          <div
+            class="remainingTime bg-midnight relative z-1 grid place-items-center rounded-[50%] p-8 text-white"
+          >
+            <h1 class="text-[100px]">25:00</h1>
+            <button class="ml-2 tracking-[1rem] uppercase">pause</button>
+          </div>
+        </div>
+      </div>
+    </main>
   </body>
 </html>

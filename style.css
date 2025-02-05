@@ -14,3 +14,7 @@
     --color-almostWhite: #EFF1FA;
     --color-midnightDarker: #161932;
 }
+
+:root {
+    --currentColor: var(--color-orange, black);
+}
