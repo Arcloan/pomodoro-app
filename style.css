@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+@theme {
+    --font-roboto: "Roboto slab", "sans-serif";
+    --font-kumbh: "Kumbh Sans", "sans-serif";
+    --font-spaceMono: "Space Mono", "monospace";
+
+    --color-orange: #F87070;
+    --color-acquamarine: #70F3F8;
+    --color-darkPink: #D881F8;
+    --color-gray: #D7E0FF;
+    --color-midnight: #1E213F;
+    --color-white: #FFFFFF;
+    --color-almostWhite: #EFF1FA;
+    --color-midnightDarker: #161932;
+}
