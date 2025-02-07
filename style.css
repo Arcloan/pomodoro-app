@@ -17,4 +17,8 @@
 
 :root {
     --currentColor: var(--color-orange, black);
+    --elapsed: 100%;
+    --pomodoro: 25;
+    --short: 5;
+    --long: 15;
 }

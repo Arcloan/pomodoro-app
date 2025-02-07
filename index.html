@@ -12,6 +12,7 @@
       href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&family=Roboto+Slab:wght@100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
       rel="stylesheet"
     />
+    <script type="module" src="index.js"></script>
   </head>
   <body class="bg-midnight">
     <header class="mt-8 mb-16 flex justify-center">
@@ -23,34 +24,38 @@
       >
         <button
           data-selected
-          class="not-data-selected:text-gray rounded-full p-3 text-sm data-selected:bg-(--currentColor)"
+          class="not-data-selected:text-gray/30 rounded-full p-3 text-sm hover:cursor-pointer data-selected:bg-(--currentColor)"
         >
           pomodoro
         </button>
         <button
-          class="not-data-selected:text-gray/30 mx-auto rounded-full p-3 text-sm data-selected:bg-(--currentColor)"
+          class="not-data-selected:text-gray/30 mx-auto rounded-full p-3 text-sm hover:cursor-pointer data-selected:bg-(--currentColor)"
         >
           short break
         </button>
         <button
-          class="not-data-selected:text-gray/30 rounded-full p-3 text-sm data-selected:bg-(--currentColor)"
+          class="not-data-selected:text-gray/30 rounded-full p-3 text-sm hover:cursor-pointer data-selected:bg-(--currentColor)"
         >
           long break
         </button>
       </div>
-      <div class="timer mx-auto rounded-[50%] bg-pink-400 p-4">
-        <div class="innerContainer relative rounded-[50%] bg-amber-400">
+      <div
+        class="timer from-midnightDarker to-gray/60 mx-auto max-w-max rounded-[50%] bg-linear-to-br from-50% p-3"
+      >
+        <div class="innerContainer bg-midnight rounded-[50%] p-3">
           <div
-            class="progressBar absolute inset-0 m-2 rounded-[50%] bg-red-500"
-          ></div>
-          <div
-            class="remainingTime bg-midnight relative z-1 grid place-items-center rounded-[50%] p-8 text-white"
+            class="progressBar w-full rounded-[50%] bg-conic-0 from-(color:--currentColor) from-(length:--elapsed) to-(length:--elapsed) p-3"
           >
-            <h1 class="text-[100px]">25:00</h1>
-            <button class="ml-2 tracking-[1rem] uppercase">pause</button>
+            <div
+              class="remainingTime bg-midnight grid place-items-center rounded-[50%] p-4 text-white"
+            >
+              <h1 class="text-[100px]">25:00</h1>
+              <button class="ml-2 tracking-[0.875rem] uppercase">start</button>
+            </div>
           </div>
         </div>
       </div>
+      <img src="assets/icon-settings.svg" alt="" class="mx-auto mt-6" />
     </main>
   </body>
 </html>
