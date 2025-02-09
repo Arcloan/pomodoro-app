@@ -1,3 +1,3 @@
-import "./timer.js";
-import "./selectMode.js";
-import "./settings.js";
+import "./src/timer.js";
+import "./src/selectMode.js";
+import "./src/settings.js";
