@@ -17,6 +17,7 @@
 
 :root {
     --currentColor: var(--color-orange, black);
+    --currentFont: var(--font-spaceMono ,"sans-serif");
     --elapsed: 100%;
     --pomodoro: 25;
     --short: 5;

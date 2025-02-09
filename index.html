@@ -14,13 +14,13 @@
     />
     <script type="module" src="index.js"></script>
   </head>
-  <body class="bg-midnight">
+  <body class="bg-midnight [font-family:var(--currentFont)]">
     <header class="mt-8 mb-16 flex justify-center">
       <img src="/assets/logo.svg" alt="" />
     </header>
     <main class="mx-auto grid max-w-[90%] gap-16">
       <div
-        class="font-kumbh mode bg-midnightDarker mx-auto flex w-max gap-2 rounded-full p-2"
+        class="mode bg-midnightDarker mx-auto flex w-max gap-2 rounded-full p-2"
       >
         <button
           data-selected
@@ -49,13 +49,192 @@
             <div
               class="remainingTime bg-midnight grid place-items-center rounded-[50%] p-4 text-white"
             >
-              <h1 class="text-[100px]">25:00</h1>
-              <button class="ml-2 tracking-[0.875rem] uppercase">start</button>
+              <h1 class="text-[80px]">25:00</h1>
+              <button
+                class="ml-2 tracking-[0.875rem] uppercase hover:cursor-pointer"
+              >
+                start
+              </button>
             </div>
           </div>
         </div>
       </div>
-      <img src="assets/icon-settings.svg" alt="" class="mx-auto mt-6" />
+      <img
+        src="assets/icon-settings.svg"
+        alt=""
+        class="mx-auto mt-6 hover:cursor-pointer"
+      />
+      <dialog class="mx-auto w-[90%] rounded-xl bg-white p-4 md:w-[60ch]" open>
+        <div class="header flex items-center justify-between pb-4 md:mx-6">
+          <h2 class="text-2xl font-bold">Settings</h2>
+          <img
+            src="./assets/icon-close.svg"
+            alt=""
+            class="hover:cursor-pointer"
+          />
+        </div>
+        <hr class="-mr-4 -ml-4" />
+        <div class="timeSelection mt-4 grid gap-2">
+          <h3 class="justify-self-center md:ml-6 md:justify-self-start">
+            Time (minutes)
+          </h3>
+          <div class="timersControl mb-2 grid gap-4 md:grid-cols-3">
+            <div class="pomodoro flex items-center justify-between md:flex-col">
+              <p>pomodoro</p>
+              <div
+                class="pomodoroMin bg-gray/60 flex items-center gap-20 rounded p-2"
+              >
+                <p class="font-bold">25</p>
+                <div class="arrows flex flex-col gap-2">
+                  <img
+                    src="./assets/icon-arrow-up.svg"
+                    alt=""
+                    class="hover:cursor-pointer"
+                  />
+                  <img
+                    src="./assets/icon-arrow-down.svg"
+                    alt=""
+                    class="hover:cursor-pointer"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="short flex items-center justify-between md:flex-col">
+              <p>short break</p>
+              <div
+                class="shortMin bg-gray/60 flex items-center gap-20 rounded p-2"
+              >
+                <p class="font-bold">5</p>
+                <div class="arrows flex flex-col gap-2">
+                  <img
+                    src="./assets/icon-arrow-up.svg"
+                    alt=""
+                    class="hover:cursor-pointer"
+                  />
+                  <img
+                    src="./assets/icon-arrow-down.svg"
+                    alt=""
+                    class="hover:cursor-pointer"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="long flex items-center justify-between md:flex-col">
+              <p>long break</p>
+              <div
+                class="longMin bg-gray/60 flex items-center gap-20 rounded p-2"
+              >
+                <p class="font-bold">15</p>
+                <div class="arrows flex flex-col gap-2">
+                  <img
+                    src="./assets/icon-arrow-up.svg"
+                    alt=""
+                    class="hover:cursor-pointer"
+                  />
+                  <img
+                    src="./assets/icon-arrow-down.svg"
+                    alt=""
+                    class="hover:cursor-pointer"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr />
+          <div
+            class="fontSelection m-4 grid gap-4 md:mx-6 md:flex md:items-center md:justify-between"
+          >
+            <h3 class="justify-self-center font-bold md:text-xl">Font</h3>
+            <div class="fontControls flex gap-4 justify-self-center">
+              <div
+                class="kumbh bg-gray/60 font-kumbh relative rounded-[50%] p-4 text-gray-500 has-[:checked]:bg-black has-[:checked]:text-white"
+              >
+                Aa
+                <input
+                  type="radio"
+                  name="fontSelected"
+                  class="absolute inset-0 h-full w-full appearance-none rounded-[50%] hover:cursor-pointer"
+                />
+              </div>
+              <div
+                class="spaceMono bg-gray/60 font-spaceMono relative rounded-[50%] p-4 text-gray-500 has-[:checked]:bg-black has-[:checked]:text-white"
+              >
+                Aa
+                <input
+                  type="radio"
+                  name="fontSelected"
+                  class="absolute inset-0 h-full w-full appearance-none rounded-[50%] hover:cursor-pointer"
+                />
+              </div>
+              <div
+                class="roboto bg-gray/60 font-roboto relative rounded-[50%] p-4 text-gray-500 has-[:checked]:bg-black has-[:checked]:text-white"
+              >
+                Aa
+                <input
+                  type="radio"
+                  name="fontSelected"
+                  class="absolute inset-0 h-full w-full appearance-none rounded-[50%] hover:cursor-pointer"
+                />
+              </div>
+            </div>
+          </div>
+          <hr />
+          <div
+            class="colorSelection m-4 grid gap-4 md:mx-6 md:flex md:items-center md:justify-between"
+          >
+            <h3 class="justify-self-center font-bold md:text-xl">Color</h3>
+            <div class="colorControls flex gap-4 justify-self-center">
+              <div
+                class="orange bg-orange group relative grid h-[56px] w-[52px] place-items-center rounded-[50%]"
+              >
+                <img
+                  src="./assets/check-mark-black-outline-svgrepo-com.svg"
+                  alt=""
+                  class="hidden h-6 w-6 group-has-[:checked]:block"
+                />
+                <input
+                  type="radio"
+                  name="colorSelected"
+                  class="absolute inset-0 appearance-none hover:cursor-pointer"
+                />
+              </div>
+              <div
+                class="acquamarine bg-acquamarine group relative grid h-[56px] w-[52px] place-items-center rounded-[50%]"
+              >
+                <img
+                  src="./assets/check-mark-black-outline-svgrepo-com.svg"
+                  alt=""
+                  class="hidden h-6 w-6 group-has-[:checked]:block hover:cursor-pointer"
+                />
+                <input
+                  type="radio"
+                  name="colorSelected"
+                  class="absolute inset-0 appearance-none"
+                />
+              </div>
+              <div
+                class="darkPink bg-darkPink group relative grid h-[56px] w-[52px] place-items-center rounded-[50%]"
+              >
+                <img
+                  src="./assets/check-mark-black-outline-svgrepo-com.svg"
+                  alt=""
+                  class="hidden h-6 w-6 group-has-[:checked]:block"
+                />
+                <input
+                  type="radio"
+                  name="colorSelected"
+                  class="absolute inset-0 appearance-none rounded-[50%] hover:cursor-pointer"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <button
+          class="absolute -bottom-6 left-[50%] -translate-x-[50%] rounded-full bg-(--currentColor) px-8 py-3 text-white hover:cursor-pointer"
+        >
+          Apply
+        </button>
+      </dialog>
     </main>
   </body>
 </html>
