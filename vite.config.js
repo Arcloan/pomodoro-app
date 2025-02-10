@@ -3,5 +3,5 @@ import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
     plugins: [tailwindcss(),],
-    base: "/pomodoro-app/"
+    base: "/pomodoro-app"
 })
